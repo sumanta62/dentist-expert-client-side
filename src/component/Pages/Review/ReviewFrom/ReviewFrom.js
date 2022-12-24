@@ -58,11 +58,11 @@ const ReviewFrom = () => {
                 <h1 className='text-center text-3xl md:text-4xl font-bold'>All Review Items</h1>
                 <p className='text-center text-sm pt-2'>You can see all reviewed items here</p>
             </div>
-            <div className="p-6 my-6 rounded-lg ">
+            <div className="p-2 md:p-6 my-6 rounded-lg ">
                 <ReviewItem></ReviewItem>
 
             </div>
-            <section className="p-6 my-6 rounded-l">
+            <section className="p-2 md:p-6 my-6 rounded-l">
                 <h1 className="text-center text-4xl font-bold">Review Added</h1>
                 <p className='text-center text-sm pt-2'>You can add some items as needed and update and delete them later.</p>
                 <form onSubmit={handlerReviewItem} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
