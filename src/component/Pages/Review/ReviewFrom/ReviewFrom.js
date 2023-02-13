@@ -65,37 +65,42 @@ const ReviewFrom = () => {
             <section className="p-2 md:p-6 my-6 rounded-l">
                 <h1 className="text-center text-4xl font-bold">Review Added</h1>
                 <p className='text-center text-sm pt-2'>You can add some items as needed and update and delete them later.</p>
-                <form onSubmit={handlerReviewItem} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
-                    <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm ">
-                        <div className="space-y-2 col-span-full lg:col-span-1">
+                <form onSubmit={handlerReviewItem} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid w-11/12 md:w-4/6 mt-4">
+                    <fieldset className="md:grid grid-cols-12 gap-6 p-6 rounded-md shadow-2xl m-auto">
+                        <div className="space-y-2 col-span-4  flex-1">
                             <p className="font-medium text-1xl md:text-2xl">Add review Inormation</p>
                             <p className="text-sm text-justify">The ADD Information Service provides information about the assessment and diagnosis of neurological disorders. Attention Deficit Hyposensitivity Disorder, and inattentive type, are usually associated with significant learning needs. !</p>
                         </div>
-                        <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-                            <div className="col-span-full sm:col-span-3">
-                                <label for="firstname" className="text-sm">Your name</label>
-                                <input name="name" type="text" placeholder="Your name" className="w-full px-4 py-3 rounded-md text-black" required />
+                        <div className="col-span-8 mt-5 md:mt-0">
+                            <div className='md:flex gap-5'>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label for="firstname" className="text-sm">Your name</label>
+                                    <input name="name" type="text" placeholder="Your name" className="w-full px-4 py-3 rounded-md text-black" required />
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label for="email" className="text-sm">Your Email</label>
+                                    <input defaultValue={user?.email} name="email" type="email" placeholder="Email" className="w-full px-4 py-3 rounded-md text-black" required readOnly />
+                                </div>
                             </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label for="email" className="text-sm">Your Email</label>
-                                <input defaultValue={user?.email} name="email" type="email" placeholder="Email" className="w-full px-4 py-3 rounded-md text-black" required readOnly />
+                            <div className="md:flex gap-5">
+                                <div className="col-span-full sm:col-span-3">
+                                    <label for="website" className="text-sm">Photo Url</label>
+                                    <input name="photoUrl" type="text" placeholder="https://" className="w-full px-3 py-2 border rounded-md text-black" required />
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label for="reting" className="text-sm">Rating</label>
+                                    <input name="reting" type="text" placeholder="0000" className="w-full px-3 py-2 border rounded-md text-black" required />
+                                </div>
                             </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label for="website" className="text-sm">Photo Url</label>
-                                <input name="photoUrl" type="text" placeholder="https://" className="w-full px-3 py-2 border rounded-md text-black" required />
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label for="email" className="text-sm">Rating</label>
-                                <input name="reting" type="text" placeholder="0000" className="w-full px-3 py-2 border rounded-md text-black" required />
-                            </div>
-
-                            <div className="col-span-full">
-                                <label for="bio" className="text-sm">Description</label>
-                                <textarea name="massage" placeholder="Massage" className="w-full px-3 py-2 border rounded-md text-black" required></textarea>
-                            </div>
-                            <div className="col-span-full">
-                                <div className="flex items-center space-x-2">
-                                    <button type="submit" className="px-6 py-2 text-sm  font-semibold rounded bg-gradient-to-r from-green-300 to-blue-300 text-gray-900 transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring">Add Review</button>
+                            <div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label for="bio" className="text-sm">Description</label>
+                                    <textarea name="massage" placeholder="Massage" className="w-full px-3 py-2 border rounded-md text-black" required></textarea>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <div className="flex items-center space-x-2">
+                                        <button type="submit" className="px-6 py-2 text-sm  font-semibold rounded bg-gradient-to-r from-green-300 to-blue-300 text-gray-900 transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring">Add Review</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

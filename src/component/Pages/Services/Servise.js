@@ -10,7 +10,7 @@ const Servise = ({ service }) => {
 
     return (
         <div>
-            <div className="card bg-blue-50 shadow-xl transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring cursor-pointer">
+            <Link to={`/details/${_id}`} className="card bg-blue-50 shadow-xl transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring cursor-pointer">
                 <PhotoProvider>
                     <PhotoView src={picture}>
                 <figure><img className='w-full h-52' src={picture} alt="" /></figure>
@@ -30,7 +30,7 @@ const Servise = ({ service }) => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 };

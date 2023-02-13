@@ -6,7 +6,6 @@ import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
-    const [accepted, setAccepted] = useState(false);
     const [error, setError] = useState('');
     const navigate = useNavigate();
     useTitle('regicter')
@@ -25,7 +24,6 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 form.reset();
                 navigate(from, { replace: true });
                 handlerUpdateUserProfile(name, photoURL)
